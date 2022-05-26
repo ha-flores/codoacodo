@@ -25,6 +25,9 @@ btn.addEventListener('click',(e) => {
   } else if (password.value == "" || (password.value).length > 10 || (password.value).length < 5) {
     modalParagraph[0].innerText = "Ingrese una contraseña válida.";
       e.preventDefault();
+  } else if (text.value.includes(" ") || password.value.includes(" ")) {
+    modalParagraph[0].innerText = "No se admiten los espacios.";
+    e.preventDefault();
   }
 });
 
